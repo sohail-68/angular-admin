@@ -1,0 +1,61 @@
+<div class="container mt-4">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h4 class="mb-3">Product List</h4>
+
+      <div *ngIf="loading" class="text-center py-4">
+        <div class="spinner-border text-primary"></div>
+      </div>
+
+      <div *ngIf="!loading && error" class="alert alert-danger">
+        {{ error }}
+      </div>
+
+      <div *ngIf="!loading && products.length">
+        <table class="table table-bordered table-hover align-middle text-center">
+          <thead class="table-light">
+            <tr>
+              <th>#</th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Brand</th>
+              <th>Stock</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let p of products; let i = index">
+              <td>{{ i + 1 }}</td>
+             <td>
+      <img *ngIf="p.images && p.images.length" 
+       [src]="'http://localhost:5000' + p.images" 
+       style="height: 50px; width: 50px; object-fit: cover;" 
+       class="rounded">
+      </td>
+
+              <td>{{ p.name }}</td>
+              <td>{{ p.category }}</td>
+              <td>₹{{ p.price }}</td>
+              <td>{{ p.brand }}</td>
+              <td>{{ p.countInStock }}</td>
+              <td>
+                <button class="btn btn-sm btn-outline-primary me-2" (click)="editProduct(p)">
+                  <i class="fa fa-edit"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-danger" (click)="deleteProduct(p._id)">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div *ngIf="!loading && !products.length && !error" class="alert alert-info">
+        No products found.
+      </div>
+    </div>
+  </div>
+</div>

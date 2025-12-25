@@ -1,0 +1,38 @@
+ .min-width-0{
+    min-width: 0
+
+}
+/* ===== DARK MODE ===== */
+body.dark-mode {
+  background-color: #0f172a; /* slate-900 */
+  color: #e5e7eb;
+}
+
+/* Cards */
+body.dark-mode .card {
+  background-color: #111827; /* gray-900 */
+  color: #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Card text */
+body.dark-mode .card-title,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #e5e7eb !important;
+}
+
+body.dark-mode .text-muted {
+  color: #9ca3af !important;
+}
+
+/* Icon background soft */
+body.dark-mode .bg-opacity-10 {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Icons brighter */
+body.dark-mode i {
+  filter: brightness(1.2);
+}
