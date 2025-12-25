@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../../services/auth';
 import { FormsModule } from '@angular/forms';
-
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.html',
-  imports: [FormsModule],
+  imports: [FormsModule,RouterModule],
   styleUrls: ['./login.css']
 })
 export class Login {   // class name proper rakho

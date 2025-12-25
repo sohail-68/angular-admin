@@ -24,7 +24,7 @@ export const appRoutes: Routes = [
 
 
   // { path: '', redirectTo: '/cart', pathMatch: 'full' },
-  { path: '', redirectTo: '/login', pathMatch: 'full' }, //
+  { path: '', redirectTo: '/admin/dashorders', pathMatch: 'full' }, //
   { path: 'login', component: Login },
   { path: 'cart', component: Cart },
   { path: 'register', component: Register },

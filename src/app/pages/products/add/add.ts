@@ -85,7 +85,7 @@ export class Add implements OnInit {
     // Existing Images (full URL banayein)
     this.existingImages = product.images ? 
       product.images.map((img: string) => 
-        img.startsWith('http') ? img : `http://localhost:5000${img}`
+        img.startsWith('http') ? img : `https://angular-server-mxyp.onrender.com${img}`
       ) : [];
 
     this.message = '✅ Edit mode activated. Updating existing product.';

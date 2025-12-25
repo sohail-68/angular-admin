@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../../services/auth';
 import { FormsModule } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-register',
   templateUrl: './register.html',
   styleUrls: ['./register.css'],
-  imports:[FormsModule,],
+  imports:[FormsModule,RouterModule],
 
   
 })
@@ -15,7 +15,7 @@ export class Register {
   name = '';
   email = '';
   password = '';
-  role = 'user';
+  role = 'admin';
 
   constructor(private authService: AuthService, private router: Router) { }
 

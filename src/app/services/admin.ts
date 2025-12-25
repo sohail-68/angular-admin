@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class Admin {
-  private apiUrl = 'http://localhost:5000/api';
+  private apiUrl = 'https://angular-server-mxyp.onrender.com/api';
 
   constructor(private http: HttpClient) { }
 
